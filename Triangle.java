@@ -1,4 +1,48 @@
 import java.awt.geom.Rectangle2D;
+
+public class Triangle implements SmithShap {
+
+  private int x;
+  private int y;
+  private int width;
+  private int height;
+  private double angle;
+
+
+  public Triangle(int x, int y, int width, int height, double angle){
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.angle = angle;
+
+  }
+
+  public double getAngle() {
+    return angle;
+  }
+
+  public int getX() {
+    return x;
+  }
+
+  public int getY() {
+    return y;
+  }
+
+  public int getWidth() {
+    return width;
+  }
+
+  public int getHeight() {
+    return height;
+  }
+
+  public double getArea() {
+    return (((double) width) * height)/2;
+  }
+
+
 /* All SmithShape triangles have one edge that is on
  * the horizontal and are defined by the angle (in degrees)
  * of the lower left corner.
@@ -22,6 +66,11 @@ import java.awt.geom.Rectangle2D;
  * and the area should be equal to the area of the Triangle
  */
 
+ public Rectangle2D toSquare(){
+   double l = Math.pow(getArea(), 0.5);
+   Rectangle2D rect = new Rectangle2D.Double(x, y, l, l);
+   return rect;
+ }
 /* Override the method toString(). It should return
  * the String:
  * Width: width
@@ -30,3 +79,13 @@ import java.awt.geom.Rectangle2D;
  * Remember that to insert a new line into a String,
  * use \n
  */
+@Override
+public String toString() {
+  String w = "Width: " + getWidth();
+  String h = "Height: " + getHeight();
+  String angle = "Angle: " + getAngle();
+  return w + "\n" + h + "\n" + angle;
+}
+
+
+}
