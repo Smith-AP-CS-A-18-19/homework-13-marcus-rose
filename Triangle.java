@@ -1,6 +1,8 @@
 import java.awt.geom.Rectangle2D;
 
-public class Triangle implements SmithShap {
+/* You misspelled SmithShape
+ */
+public class Triangle implements SmithShape {
 
   private int x;
   private int y;
