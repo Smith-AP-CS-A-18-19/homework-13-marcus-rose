@@ -14,3 +14,7 @@ Make sure that you include your first and last name in the comment section at th
 ## Feedback
 You misspelled SmithShape as SmithShap. You need to make sure that your code runs before you submit it.
 09/10
+
+## Feedback
+Pass
+10/10
